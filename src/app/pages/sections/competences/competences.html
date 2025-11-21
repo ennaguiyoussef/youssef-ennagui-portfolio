@@ -1,0 +1,27 @@
+<section id="competences" class="section-padding" aria-label="Compétences">
+  <div class="container">
+    <div class="section-header text-center mb-4">
+      <span class="section-badge"><i class="bi bi-braces" aria-hidden="true"></i> Expertise</span>
+      <h2 class="section-title">Mes Compétences</h2>
+      <p class="section-subtitle">Technologies et outils</p>
+    </div>
+    <div class="row g-4">
+      @for (g of groups; track g.title) {
+        <div class="col-md-4">
+          <div class="skill-card">
+            <h3>{{g.title}}</h3>
+            <div class="tech-stack">
+              @for (t of g.items; track t) {
+                <span class="tech-badge">{{t}}</span>
+              } @empty {
+                <span class="text-muted">Aucun élément</span>
+              }
+            </div>
+          </div>
+        </div>
+      } @empty {
+        <div class="col-12"><p class="text-muted">Aucune compétence disponible.</p></div>
+      }
+    </div>
+  </div>
+</section>

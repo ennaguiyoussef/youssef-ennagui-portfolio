@@ -1,0 +1,28 @@
+<section id="projets" class="section-padding section-alt" aria-label="Projets">
+  <div class="container">
+    <div class="section-header text-center mb-4">
+      <span class="section-badge"><i class="bi bi-rocket" aria-hidden="true"></i> Portfolio</span>
+      <h2 class="section-title">Mes Projets</h2>
+    </div>
+    <div class="row g-4">
+      @for (p of projets; track p.titre) {
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="project-icon"><i [class]="p.icon"></i></div>
+            <h3>{{p.titre}}</h3>
+            <p>{{p.desc}}</p>
+            <div class="project-tags">
+              @for (t of p.tags; track t) {
+                <span>{{t}}</span>
+              } @empty {
+                <span class="text-muted">-</span>
+              }
+            </div>
+          </div>
+        </div>
+      } @empty {
+        <div class="col-12"><p class="text-muted">Aucun projet pour l'instant.</p></div>
+      }
+    </div>
+  </div>
+</section>

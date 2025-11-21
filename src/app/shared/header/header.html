@@ -1,0 +1,30 @@
+<!-- Navbar Bootstrap du portfolio -->
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom shadow-sm fixed-top" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#accueil" aria-label="Retour à l'accueil">
+        <span class="brand-initials rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center">YE</span>
+        <span class="fw-semibold d-none d-sm-inline" [class.text-white]="theme.isDark()">Youssef Ennagui</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Basculer la navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#accueil" aria-label="Accueil">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projets" aria-label="Projets">Projets</a></li>
+          <li class="nav-item"><a class="nav-link" href="#competences" aria-label="Compétences">Compétences</a></li>
+          <li class="nav-item"><a class="nav-link" href="#parcours" aria-label="Parcours">Parcours</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog" aria-label="Blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact" aria-label="Contact">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 ms-lg-3">
+          <a class="btn btn-outline-primary btn-sm" href="/cv-youssef-ennagui.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le CV">CV</a>
+          <button class="btn btn-secondary btn-sm" type="button" (click)="toggleTheme()" [attr.aria-label]="themeAriaLabel">
+            <i [class]="themeIconClass" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

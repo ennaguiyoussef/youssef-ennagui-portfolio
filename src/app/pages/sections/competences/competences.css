@@ -1,0 +1,8 @@
+.skill-card{background:var(--bg-color);border:1px solid var(--border-color);border-radius:18px;padding:1.4rem;transition:.3s}
+.skill-card:hover{transform:translateY(-6px);box-shadow:0 10px 35px rgba(0,0,0,.12)}
+:root[data-theme='dark'] .skill-card{background:var(--bg-light)}
+.skill-card h3{font-size:1.15rem;font-weight:700;margin-bottom:.9rem;color:var(--text-color)}
+.tech-stack{display:flex;flex-wrap:wrap;gap:.5rem}
+.tech-badge{padding:.4rem .75rem;background:rgba(99,102,241,.12);border:1px solid rgba(99,102,241,.25);border-radius:18px;font-size:.75rem;font-weight:600;color:var(--primary-color);transition:.25s}
+.tech-badge:hover{background:var(--primary-color);color:#fff;transform:scale(1.05)}
+

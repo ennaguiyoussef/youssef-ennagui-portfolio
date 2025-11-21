@@ -1,1 +1,131 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* App layout avec footer sticky */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px; /* Compenser la navbar fixed-top */
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Mode sombre */
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Palette claire */
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --secondary-color: #8b5cf6;
+  --accent-color: #fbbf24;
+  --text-color: #1f2937;
+  --text-light: #6b7280;
+  --bg-color: #ffffff;
+  --bg-light: #f9fafb;
+  --border-color: #e5e7eb;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,.08);
+  --shadow: 0 10px 30px rgba(0,0,0,.12);
+  --shadow-lg: 0 20px 55px rgba(0,0,0,.16);
+  --transition: .3s cubic-bezier(.4,0,.2,1);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  /* Palette sombre */
+  --primary-color: #818cf8;
+  --primary-dark: #6366f1;
+  --secondary-color: #a78bfa;
+  --accent-color: #fbbf24;
+  --text-color: #f9fafb;
+  --text-light: #d1d5db;
+  --bg-color: #0f172a;
+  --bg-light: #1e293b;
+  --border-color: #334155;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,.4);
+  --shadow: 0 10px 30px rgba(0,0,0,.55);
+  --shadow-lg: 0 20px 55px rgba(0,0,0,.7);
+}
+
+:root[data-theme='dark'] body {
+  background-color: #0d1117 !important;
+  color: #e6edf3 !important;
+}
+
+:root[data-theme='dark'] .bg-body-tertiary {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+:root[data-theme='dark'] .text-body {
+  color: #e6edf3 !important;
+}
+
+:root[data-theme='dark'] .text-body-secondary,
+:root[data-theme='dark'] .text-muted {
+  color: #8b949e !important;
+}
+
+:root[data-theme='dark'] .border-top,
+:root[data-theme='dark'] .border-bottom {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+:root[data-theme='dark'] .navbar {
+  background-color: rgba(13, 17, 23, 0.95) !important;
+}
+
+:root[data-theme='dark'] .nav-link {
+  color: #e6edf3 !important;
+}
+
+:root[data-theme='dark'] .nav-link:hover {
+  color: #58a6ff !important;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Classes utilitaires */
+.text-primary { color: var(--primary-color) !important; }
+.bg-primary-gradient { background: linear-gradient(135deg,var(--primary-color),var(--secondary-color)); }
+.border-soft { border:1px solid var(--border-color); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.shadow-lg-custom { box-shadow: var(--shadow-lg); }
+
+/* Typographie de section */
+.section-padding { padding: 5rem 0; }
+.section-alt { background: var(--bg-light); }
+:root[data-theme='dark'] .section-alt { background: var(--bg-color); }
+.section-title { font-size: clamp(2rem,4vw,3rem); font-weight:800; color: var(--text-color); }
+.section-subtitle { font-size:1.1rem; color: var(--text-light); }
+.section-badge { display:inline-block; padding:.5rem 1.1rem; background: rgba(99,102,241,.1); border:1px solid rgba(99,102,241,.25); color: var(--primary-color); border-radius:50px; font-size:.8rem; font-weight:600; }
+.section-badge i { margin-right: .45rem; font-size: 1rem; vertical-align: -2px; }
+
+/* Réinitialisation de cartes génériques pour dark mode */
+.card-surface { background: var(--bg-color); border:1px solid var(--border-color); border-radius: var(--radius-lg); transition: var(--transition); }
+:root[data-theme='dark'] .card-surface { background: var(--bg-light); }
+.card-surface.hover:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--primary-color); }
+
+/* Liens interactifs */
+.link-accent { color: var(--primary-color); text-decoration:none; font-weight:600; transition: var(--transition); }
+.link-accent:hover { color: var(--primary-dark); }
+
+/* Ajustements nav fixe */
+.navbar.fixed-top { backdrop-filter: blur(10px); background-color: rgba(var(--bs-body-bg-rgb),0.9) !important; }
+:root[data-theme='dark'] .navbar.fixed-top { background-color: rgba(15,23,42,0.85) !important; }
+
+/* Scroll offset pour ancres */
+section { scroll-margin-top: 80px; }

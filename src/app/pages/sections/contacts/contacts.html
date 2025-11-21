@@ -1,0 +1,19 @@
+<section id="contact" class="section-padding" aria-label="Contact">
+  <div class="container">
+    <div class="section-header text-center mb-4">
+      <span class="section-badge"><i class="bi bi-chat-square-text" aria-hidden="true"></i> Contact</span>
+      <h2 class="section-title">Contactez-moi</h2>
+    </div>
+    <div class="contact-grid">
+      @for (c of contacts; track c.label) {
+        <a class="contact-card" [href]="c.link" target="_blank" rel="noopener">
+          <div class="contact-icon"><i [class]="c.icon"></i></div>
+          <h3>{{c.label}}</h3>
+          <p>{{c.value}}</p>
+        </a>
+      } @empty {
+        <p class="text-muted">Aucun contact disponible.</p>
+      }
+    </div>
+  </div>
+</section>

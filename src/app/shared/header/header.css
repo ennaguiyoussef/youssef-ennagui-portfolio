@@ -1,0 +1,45 @@
+.brand-initials { width: 36px; height: 36px; font-weight:600; }
+.navbar-brand { font-size: 1rem; }
+.nav-link.active { font-weight: 600; }
+
+/* Smooth scroll offset pour navbar fixed */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Active link styling */
+.nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+/* Navbar fixed background */
+.navbar.fixed-top {
+  backdrop-filter: blur(10px);
+  background-color: rgba(var(--bs-body-bg-rgb), 0.95) !important;
+}
+
+:root[data-theme='dark'] .navbar.fixed-top {
+  background-color: rgba(26, 32, 44, 0.95) !important;
+}
+:root[data-theme='dark'] .navbar .navbar-brand,
+:root[data-theme='dark'] .navbar .navbar-brand .fw-semibold {
+  color: var(--text-color) !important;
+}
+:root[data-theme='dark'] .navbar .navbar-brand:hover {
+  color: #58a6ff !important;
+}
+:root[data-theme='dark'] .navbar .navbar-brand span.fw-semibold.d-none.d-sm-inline {
+  color: var(--text-color) !important;
+  transition: color .3s ease;
+}
+:host-context([data-theme='dark']) .navbar .navbar-brand span.fw-semibold.d-none.d-sm-inline {
+  color:#f9fafb !important;
+}
+:host-context([data-theme='dark']) .navbar .navbar-brand span.fw-semibold.d-none.d-sm-inline.text-white {
+  color:#ffffff !important;
+}
+/* Variables Bootstrap (si supportées) */
+:root[data-theme='dark'] {
+  --bs-navbar-brand-color: var(--text-color);
+  --bs-navbar-brand-hover-color: #58a6ff;
+}

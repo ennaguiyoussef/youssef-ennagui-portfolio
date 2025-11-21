@@ -1,0 +1,22 @@
+<section id="blog" class="section-padding section-alt" aria-label="Blog">
+  <div class="container">
+    <div class="section-header text-center mb-4">
+      <span class="section-badge"><i class="bi bi-pencil-square" aria-hidden="true"></i> Articles</span>
+      <h2 class="section-title">Blog</h2>
+    </div>
+    <div class="row g-4">
+      @for (p of posts; track p.titre) {
+        <div class="col-md-6 col-lg-4">
+          <article class="blog-card">
+            <div class="blog-date">{{p.date}}</div>
+            <h3>{{p.titre}}</h3>
+            <p>{{p.desc}}</p>
+            <a href="#" class="blog-link">Lire <i class="bi bi-arrow-right"></i></a>
+          </article>
+        </div>
+      } @empty {
+        <div class="col-12"><p class="text-muted">Aucun article publié.</p></div>
+      }
+    </div>
+  </div>
+</section>
