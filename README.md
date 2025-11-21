@@ -1,5 +1,5 @@
-# Portfolio Youssef Ennagui
 
+<<<<<<< HEAD
 Portfolio personnel moderne développé avec Angular 20, Bootstrap 5 et Bootstrap Icons.
 
 ## 🚀 Déploiement sur GitHub Pages
@@ -123,3 +123,5 @@ Pour toute question : youssef.ennagui@usmba.ac.ma
 - ✅ Création du projet de portfolio Angular
 - ✅ Configuration du déploiement GitHub Pages
 - ✅ Mise en place du workflow CI/CD
+=======
+>>>>>>> ca23a08aebd04f610c04989dec09771548ee6706

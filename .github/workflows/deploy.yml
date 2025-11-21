@@ -33,6 +33,10 @@ jobs:
       - name: Build
         run: npm run build:gh-pages
 
+      - name: Vérifier assets
+        run: |
+          ls -R dist/youssef-ennagui-portfolio/browser/assets/images || echo "Dossier images introuvable"
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -48,4 +52,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
