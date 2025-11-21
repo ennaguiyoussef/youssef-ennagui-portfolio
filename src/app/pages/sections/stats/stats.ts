@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class StatsSection {
   stats = [
-    { value: '10+', label: 'Projets réalisés' },
-    { value: '5+', label: 'Technologies' },
-    { value: '2+', label: "Ans d'expérience" },
+    { value: '--', label: 'Projets réalisés' },
+    { value: '--', label: 'Technologies' },
+    { value: '--', label: "Ans d'expérience" },
     { value: '100%', label: 'Motivation' },
   ];
 }

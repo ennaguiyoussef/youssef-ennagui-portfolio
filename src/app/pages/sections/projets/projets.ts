@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ProjetsSection {
   projets = [
-    { icon: 'bi bi-code-slash', titre: 'App Web Full Stack', desc: 'Angular + Node.js + Auth', tags: ['Angular','Node','Auth'] },
-    { icon: 'bi bi-graph-up', titre: 'Analyse & ML', desc: 'Pipeline data & modèles ML', tags: ['Python','Pandas','ML'] },
-    { icon: 'bi bi-cloud', titre: 'Infra Cloud', desc: 'Docker, AWS, CI/CD', tags: ['Docker','AWS','CI/CD'] }
+    { icon: 'bi bi-code-slash', titre: 'App Web Full Stack', desc: 'React + Laravel + Database Mysql', tags: ['React','Laravel','Mysql'] },
+    { icon: '', titre: '------------', desc: '------------------', tags: [] },
+    { icon: '', titre: '------------', desc: '-------------------', tags: [] }
   ];
 }
 
